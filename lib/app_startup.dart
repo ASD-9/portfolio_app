@@ -19,7 +19,6 @@ class _AppStartupState extends State<AppStartup> {
     _initFuture = AppData.instance.init();
   }
 
-
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
