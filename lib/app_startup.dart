@@ -54,7 +54,7 @@ class _AppStartupState extends State<AppStartup> {
             ),
           );
         } else {
-          return const MyHomePage(title: "AAAA",);
+          return const MyHomePage();
         }
       }
     );
