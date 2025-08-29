@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_app/widgets/responsive.dart';
+import 'package:portfolio_app/widgets/title_button.dart';
 
 class MyAppBar extends StatelessWidget {
   const MyAppBar({super.key});
@@ -7,21 +8,7 @@ class MyAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      title: MouseRegion(
-        cursor: SystemMouseCursors.click,
-        child: GestureDetector(
-          onTap: () {},
-          child: Row(
-            children: [
-              Icon(
-                Icons.code
-              ),
-              const SizedBox(width: 10),
-              Text('Portfolio'),
-            ],
-          )
-        )
-      ),
+      title: TitleButton(isInDrawer: false),
       actions: [
         if (!Responsive.isMobile(context))
           Row(
