@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio_app/widgets/about/about_desktop.dart';
 import 'package:portfolio_app/widgets/app_bar.dart';
 import 'package:portfolio_app/widgets/end_drawer.dart';
 import 'package:portfolio_app/widgets/presentation/presentation_desktop.dart';
@@ -18,7 +19,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       endDrawer: EndDrawer(),
-      body: Center(
+      body: SingleChildScrollView(
         child: Column(
           spacing: 50,
           children: [
@@ -27,6 +28,10 @@ class _MyHomePageState extends State<MyHomePage> {
               desktop: PresentationDesktop(),
               mobile: PresentationMobile(),
             ),
+            Responsive(
+              desktop: AboutDesktop(),
+            ),
+            const SizedBox(height: 50,)
           ],
         ),
       ),
