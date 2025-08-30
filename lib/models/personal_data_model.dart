@@ -5,6 +5,7 @@ class PersonalDataModel {
   final String linkedin;
   final String github;
   final String about;
+  final List<String> softSkills;
 
   PersonalDataModel({
     required this.name,
@@ -12,7 +13,8 @@ class PersonalDataModel {
     required this.phone,
     required this.linkedin,
     required this.github,
-    required this.about
+    required this.about,
+    required this.softSkills
   });
 
   factory PersonalDataModel.fromJson(Map<String, dynamic> json) {
@@ -22,7 +24,8 @@ class PersonalDataModel {
       phone: json['personalInfo']["contact"]['phone'],
       linkedin: json['personalInfo']['contact']['linkedin'],
       github: json['personalInfo']['github'],
-      about: json['personalInfo']['about']
+      about: json['personalInfo']['about'],
+      softSkills: List<String>.from(json['personalInfo']['skills']['soft'])
     );
   }
 }

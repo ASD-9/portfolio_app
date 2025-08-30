@@ -28,6 +28,11 @@ class Profil extends StatelessWidget {
               ContactIconButton(uri: Uri(scheme: "tel", path: personalData.phone), toolTip: personalData.phone, icon: "phone"),
             ],
           ),
+          Wrap(
+            spacing: 20,
+            runSpacing: 10,
+            children: personalData.softSkills.map((e) => Chip(label: Text(e))).toList(),
+          )
         ],
       ),
     );

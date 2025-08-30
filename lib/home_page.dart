@@ -21,7 +21,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: MyAppBar(),
       endDrawer: EndDrawer(),
       body: SingleChildScrollView(
-        padding: const EdgeInsets.all(50),
+        padding: EdgeInsets.all(Responsive.isMobile(context) ? 50 : 100),
         child: Column(
           spacing: 50,
           children: [
