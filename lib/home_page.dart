@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_app/widgets/app_bar.dart';
 import 'package:portfolio_app/widgets/end_drawer.dart';
+import 'package:portfolio_app/widgets/presentation/presentation_desktop.dart';
+import 'package:portfolio_app/widgets/presentation/presentation_mobile.dart';
+import 'package:portfolio_app/widgets/responsive.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
@@ -17,9 +20,13 @@ class _MyHomePageState extends State<MyHomePage> {
       endDrawer: EndDrawer(),
       body: Center(
         child: Column(
+          spacing: 50,
           children: [
             MyAppBar(),
-            const Text('Page Content To Be Added'),
+            Responsive(
+              desktop: PresentationDesktop(),
+              mobile: PresentationMobile(),
+            ),
           ],
         ),
       ),
