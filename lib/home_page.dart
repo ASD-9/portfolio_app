@@ -18,12 +18,13 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: MyAppBar(),
       endDrawer: EndDrawer(),
       body: SingleChildScrollView(
+        padding: const EdgeInsets.all(50),
         child: Column(
           spacing: 50,
           children: [
-            MyAppBar(),
             Responsive(
               desktop: PresentationDesktop(),
               mobile: PresentationMobile(),
@@ -31,7 +32,6 @@ class _MyHomePageState extends State<MyHomePage> {
             Responsive(
               desktop: AboutDesktop(),
             ),
-            const SizedBox(height: 50,)
           ],
         ),
       ),

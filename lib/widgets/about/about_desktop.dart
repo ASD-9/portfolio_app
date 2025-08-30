@@ -10,7 +10,7 @@ class AboutDesktop extends StatelessWidget {
     final PersonalDataModel personalData = AppData.instance.personalData;
     return SelectionArea(
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 50),
+        padding: const EdgeInsets.symmetric(horizontal: 0),
         child: Column(
           spacing: 20,
           crossAxisAlignment: CrossAxisAlignment.start,

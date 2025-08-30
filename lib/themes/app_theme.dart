@@ -8,6 +8,7 @@ ThemeData getAppTheme() {
     appBarTheme: AppBarTheme(
       backgroundColor: Colors.transparent,
       elevation: 0,
+      scrolledUnderElevation: 0,
     ),
   );
 }
