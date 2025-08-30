@@ -8,9 +8,8 @@ class PresentationDesktop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
-        Profil(),
+        Expanded(child: Profil()),
         ProfilImage(
           width: 350,
           height: 400,
