@@ -11,23 +11,25 @@ class Profil extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final PersonalDataModel personalData = AppData.instance.personalData;
-    return Column(
-      spacing: 20,
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          personalData.name,
-          style: Theme.of(context).textTheme.displayLarge,
-        ),
-        Row(
-          children: [
-            ContactIconButton(uri: Uri.parse(personalData.github), toolTip: "GitHub", icon: "github"),
-            ContactIconButton(uri: Uri.parse(personalData.linkedin), toolTip: "LinkedIn", icon: "linkedin"),
-            ContactIconButton(uri: Uri(scheme: "mailto", path: personalData.email), toolTip: personalData.email, icon: "mail"),
-            ContactIconButton(uri: Uri(scheme: "tel", path: personalData.phone), toolTip: personalData.phone, icon: "phone"),
-          ],
-        ),
-      ],
+    return SelectionArea(
+      child: Column(
+        spacing: 20,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            personalData.name,
+            style: Theme.of(context).textTheme.displayLarge,
+          ),
+          Row(
+            children: [
+              ContactIconButton(uri: Uri.parse(personalData.github), toolTip: "GitHub", icon: "github"),
+              ContactIconButton(uri: Uri.parse(personalData.linkedin), toolTip: "LinkedIn", icon: "linkedin"),
+              ContactIconButton(uri: Uri(scheme: "mailto", path: personalData.email), toolTip: personalData.email, icon: "mail"),
+              ContactIconButton(uri: Uri(scheme: "tel", path: personalData.phone), toolTip: personalData.phone, icon: "phone"),
+            ],
+          ),
+        ],
+      ),
     );
   }
 }
