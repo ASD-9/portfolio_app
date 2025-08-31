@@ -1,3 +1,5 @@
+import 'package:portfolio_app/models/experience_model.dart';
+
 class PersonalDataModel {
   final String name;
   final String email;
@@ -6,6 +8,7 @@ class PersonalDataModel {
   final String github;
   final String about;
   final List<String> softSkills;
+  final List<ExperienceModel> experiences;
 
   PersonalDataModel({
     required this.name,
@@ -14,7 +17,8 @@ class PersonalDataModel {
     required this.linkedin,
     required this.github,
     required this.about,
-    required this.softSkills
+    required this.softSkills,
+    required this.experiences
   });
 
   factory PersonalDataModel.fromJson(Map<String, dynamic> json) {
@@ -25,7 +29,8 @@ class PersonalDataModel {
       linkedin: json['personalInfo']['contact']['linkedin'],
       github: json['personalInfo']['github'],
       about: json['personalInfo']['about'],
-      softSkills: List<String>.from(json['personalInfo']['skills']['soft'])
+      softSkills: List<String>.from(json['personalInfo']['skills']['soft']),
+      experiences: List<ExperienceModel>.from(json['personalInfo']['experiences'].map((e) => ExperienceModel.fromJson(e)))
     );
   }
 }

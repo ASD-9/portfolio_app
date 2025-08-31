@@ -9,22 +9,17 @@ class AboutDesktop extends StatelessWidget {
   Widget build(BuildContext context) {
     final PersonalDataModel personalData = AppData.instance.personalData;
     return SelectionArea(
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 0),
-        child: Column(
-          spacing: 20,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              "À propos de moi",
-              style: Theme.of(context).textTheme.headlineLarge
-            ),
-            Text(
-              personalData.about,
-              style: Theme.of(context).textTheme.bodyLarge
-            )
-          ],
-        ),
+      child: Column(
+        spacing: 20,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            "À propos de moi",
+            style: Theme.of(context).textTheme.headlineLarge
+          ),
+          const Divider(),
+          Text(personalData.about)
+        ],
       ),
     );
   }
