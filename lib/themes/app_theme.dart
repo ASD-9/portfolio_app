@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 ThemeData getAppTheme() {
   final ColorScheme colorScheme = ColorScheme.fromSeed(
@@ -31,6 +32,8 @@ ThemeData getAppTheme() {
     scrollbarTheme: ScrollbarThemeData(
       thickness: WidgetStatePropertyAll(5),
       thumbColor: WidgetStatePropertyAll(colorScheme.onPrimary),
-    )
+    ),
+
+    fontFamily: GoogleFonts.raleway().fontFamily
   );
 }
