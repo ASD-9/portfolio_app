@@ -7,6 +7,7 @@ class PersonalDataModel {
   final String phone;
   final String linkedin;
   final String github;
+  final String resume;
   final String about;
   final List<String> softSkills;
   final List<ExperienceModel> experiences;
@@ -18,6 +19,7 @@ class PersonalDataModel {
     required this.phone,
     required this.linkedin,
     required this.github,
+    required this.resume,
     required this.about,
     required this.softSkills,
     required this.experiences,
@@ -31,6 +33,7 @@ class PersonalDataModel {
       phone: json['personalInfo']["contact"]['phone'],
       linkedin: json['personalInfo']['contact']['linkedin'],
       github: json['personalInfo']['github'],
+      resume: json['personalInfo']['resume'],
       about: json['personalInfo']['about'],
       softSkills: List<String>.from(json['personalInfo']['skills']['soft']),
       experiences: List<ExperienceModel>.from(json['personalInfo']['experiences'].map((e) => ExperienceModel.fromJson(e))),

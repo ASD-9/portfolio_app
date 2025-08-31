@@ -26,6 +26,7 @@ class Profil extends StatelessWidget {
               ContactIconButton(uri: Uri.parse(personalData.linkedin), toolTip: "LinkedIn", icon: "linkedin"),
               ContactIconButton(uri: Uri(scheme: "mailto", path: personalData.email), toolTip: personalData.email, icon: "mail"),
               ContactIconButton(uri: Uri(scheme: "tel", path: personalData.phone), toolTip: personalData.phone, icon: "phone"),
+              ContactIconButton(uri: Uri.parse(personalData.resume), toolTip: "CV", icon: "resume"),
             ],
           ),
           Wrap(
