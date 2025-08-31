@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio_app/navigation_controller.dart';
 import 'package:portfolio_app/widgets/common/responsive.dart';
 import 'package:portfolio_app/widgets/common/title_button.dart';
 
@@ -8,6 +9,7 @@ class EndDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     if (!Responsive.isMobile(context)) return const SizedBox.shrink();
+    final NavigationController nav = NavigationController.instance;
     return Drawer(
       child: Column(
         spacing: 20,
@@ -23,6 +25,7 @@ class EndDrawer extends StatelessWidget {
             highlightColor: Colors.transparent,
             onPressed: () {
               Scaffold.of(context).closeEndDrawer();
+              nav.scrollToSection(nav.aboutSectionKey);
             },
             child: const Text('À propos')
           ),
@@ -34,6 +37,7 @@ class EndDrawer extends StatelessWidget {
             highlightColor: Colors.transparent,
             onPressed: () {
               Scaffold.of(context).closeEndDrawer();
+              nav.scrollToSection(nav.experiencesSectionKey);
             },
             child: const Text('Expériences')
           ),
@@ -45,6 +49,7 @@ class EndDrawer extends StatelessWidget {
             highlightColor: Colors.transparent,
             onPressed: () {
               Scaffold.of(context).closeEndDrawer();
+              nav.scrollToSection(nav.projectsSectionKey);
             },
             child: const Text('Projets')
           ),
