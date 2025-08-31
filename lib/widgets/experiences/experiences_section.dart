@@ -2,10 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:portfolio_app/data/app_data.dart';
 import 'package:portfolio_app/models/experience_model.dart';
-import 'package:portfolio_app/models/link_model.dart';
 import 'package:portfolio_app/models/personal_data_model.dart';
+import 'package:portfolio_app/widgets/link_chip.dart';
 import 'package:portfolio_app/widgets/responsive.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class ExperiencesSection extends StatelessWidget {
   const ExperiencesSection({super.key});
@@ -62,9 +61,7 @@ class ExperiencesSection extends StatelessWidget {
           Wrap(
             spacing: 8,
             runSpacing: 8,
-            children: experience.links.map((e) {
-              return _buildLinkChip(e, context);
-            }).toList(),
+            children: experience.links.map((e) => LinkChip(link: e)).toList(),
           ),
           Wrap(
             spacing: 8,
@@ -78,27 +75,6 @@ class ExperiencesSection extends StatelessWidget {
           )
         ],
       ),
-    );
-  }
-
-  Widget _buildLinkChip(LinkModel link, BuildContext context) {
-    return ActionChip(
-      onPressed: () async {
-        try {
-          await launchUrl(Uri.parse(link.url));
-        } catch (e) {
-          if (context.mounted) {
-            ScaffoldMessenger.of(context).showSnackBar(
-              SnackBar(
-                content: Text("Impossible d'ouvrir le lien"),
-              ),
-            );
-          } 
-        }
-      },
-      backgroundColor: Colors.transparent,
-      label: Text(link.label),
-      avatar: Icon(Icons.link, color: Theme.of(context).colorScheme.onSurface,),
     );
   }
 }

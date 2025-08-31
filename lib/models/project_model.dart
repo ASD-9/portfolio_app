@@ -5,6 +5,7 @@ class ProjectModel {
   final String title;
   final String description;
   final String github;
+  final List<String> technologies;
   final List<LinkModel> links;
 
   ProjectModel({
@@ -12,6 +13,7 @@ class ProjectModel {
     required this.title,
     required this.description,
     required this.github,
+    required this.technologies,
     required this.links
   });
 
@@ -21,6 +23,7 @@ class ProjectModel {
       title: json['title'],
       description: json['description'],
       github: json['github'],
+      technologies: List<String>.from(json['technologies']),
       links: List<LinkModel>.from(json['links'].map((x) => LinkModel.fromJson(x))),
     );
   }
