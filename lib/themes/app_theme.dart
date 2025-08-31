@@ -21,7 +21,7 @@ ThemeData getAppTheme() {
       shape: const StadiumBorder(),
       labelStyle: TextStyle(color: colorScheme.onSurface,),
       side: BorderSide.none,
-      padding: EdgeInsets.all(10)
+      padding: EdgeInsets.all(10),
     ),
 
     dividerTheme: DividerThemeData(

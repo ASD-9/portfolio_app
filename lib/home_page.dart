@@ -5,6 +5,7 @@ import 'package:portfolio_app/widgets/end_drawer.dart';
 import 'package:portfolio_app/widgets/experiences/experiences_section.dart';
 import 'package:portfolio_app/widgets/presentation/presentation_desktop.dart';
 import 'package:portfolio_app/widgets/presentation/presentation_mobile.dart';
+import 'package:portfolio_app/widgets/projects/projects_section.dart';
 import 'package:portfolio_app/widgets/responsive.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -36,7 +37,8 @@ class _MyHomePageState extends State<MyHomePage> {
               Responsive(
                 desktop: AboutDesktop(),
               ),
-              const ExperiencesSection()
+              const ExperiencesSection(),
+              const ProjectsSection()
             ],
           ),
         ),
