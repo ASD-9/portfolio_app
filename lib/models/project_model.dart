@@ -1,7 +1,7 @@
 import 'package:portfolio_app/models/link_model.dart';
 
 class ProjectModel {
-  final String id;
+  final int id;
   final String title;
   final String description;
   final String github;

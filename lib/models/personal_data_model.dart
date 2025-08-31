@@ -34,7 +34,7 @@ class PersonalDataModel {
       about: json['personalInfo']['about'],
       softSkills: List<String>.from(json['personalInfo']['skills']['soft']),
       experiences: List<ExperienceModel>.from(json['personalInfo']['experiences'].map((e) => ExperienceModel.fromJson(e))),
-      projects: List<ProjectModel>.from(json['personalInfo']['projects'].map((e) => ProjectModel.fromJson(e)))
+      projects: List<ProjectModel>.from(json['projects'].map((e) => ProjectModel.fromJson(e)))
     );
   }
 }
