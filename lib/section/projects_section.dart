@@ -103,9 +103,11 @@ class ProjectsSection extends StatelessWidget {
         Row(
           spacing: 10,
           children: [
-            Text(
-              project.title,
-              style: Theme.of(context).textTheme.titleLarge
+            Flexible(
+              child: Text(
+                project.title,
+                style: Theme.of(context).textTheme.titleLarge
+              ),
             ),
             Icon(
               Icons.open_in_new
