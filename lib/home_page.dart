@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio_app/navigation_controller.dart';
 import 'package:portfolio_app/section/about_section.dart';
 import 'package:portfolio_app/widgets/home/app_bar.dart';
 import 'package:portfolio_app/widgets/home/end_drawer.dart';
@@ -23,6 +24,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: MyAppBar(),
       endDrawer: EndDrawer(),
       body: SingleChildScrollView(
+        controller: NavigationController.instance.scrollController,
         padding: EdgeInsets.all(Responsive.isMobile(context) ? 50 : 100),
         child: DefaultTextStyle(
           style: Theme.of(context).textTheme.bodyLarge!,

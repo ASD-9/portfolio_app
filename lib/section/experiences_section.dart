@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:portfolio_app/data/app_data.dart';
 import 'package:portfolio_app/models/experience_model.dart';
 import 'package:portfolio_app/models/personal_data_model.dart';
+import 'package:portfolio_app/navigation_controller.dart';
 import 'package:portfolio_app/widgets/common/link_chip.dart';
 import 'package:portfolio_app/widgets/common/responsive.dart';
 
@@ -13,6 +14,7 @@ class ExperiencesSection extends StatelessWidget {
   Widget build(BuildContext context) {
     final PersonalDataModel personalData = AppData.instance.personalData;
     return SelectionArea(
+      key: NavigationController.instance.experiencesSectionKey,
       child: Column(
         spacing: 20,
         crossAxisAlignment: CrossAxisAlignment.start,
