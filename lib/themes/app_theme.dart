@@ -26,6 +26,11 @@ ThemeData getAppTheme() {
 
     dividerTheme: DividerThemeData(
       color: colorScheme.onSurface
+    ),
+
+    scrollbarTheme: ScrollbarThemeData(
+      thickness: WidgetStatePropertyAll(5),
+      thumbColor: WidgetStatePropertyAll(colorScheme.onPrimary),
     )
   );
 }
