@@ -3,8 +3,8 @@ import 'package:flutter_svg/svg.dart';
 import 'package:portfolio_app/data/app_data.dart';
 import 'package:portfolio_app/models/personal_data_model.dart';
 import 'package:portfolio_app/models/project_model.dart';
-import 'package:portfolio_app/widgets/link_chip.dart';
-import 'package:portfolio_app/widgets/responsive.dart';
+import 'package:portfolio_app/widgets/common/link_chip.dart';
+import 'package:portfolio_app/widgets/common/responsive.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ProjectsSection extends StatelessWidget {

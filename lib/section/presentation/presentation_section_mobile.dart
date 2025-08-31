@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:portfolio_app/widgets/presentation/profil.dart';
 import 'package:portfolio_app/widgets/presentation/profil_image.dart';
 
-class PresentationMobile extends StatelessWidget {
-  const PresentationMobile({super.key});
+class PresentationSectionMobile extends StatelessWidget {
+  const PresentationSectionMobile({super.key});
 
   @override
   Widget build(BuildContext context) {

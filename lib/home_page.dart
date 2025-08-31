@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio_app/widgets/about/about_desktop.dart';
-import 'package:portfolio_app/widgets/app_bar.dart';
-import 'package:portfolio_app/widgets/end_drawer.dart';
-import 'package:portfolio_app/widgets/experiences/experiences_section.dart';
-import 'package:portfolio_app/widgets/presentation/presentation_desktop.dart';
-import 'package:portfolio_app/widgets/presentation/presentation_mobile.dart';
-import 'package:portfolio_app/widgets/projects/projects_section.dart';
-import 'package:portfolio_app/widgets/responsive.dart';
+import 'package:portfolio_app/section/about_section.dart';
+import 'package:portfolio_app/widgets/home/app_bar.dart';
+import 'package:portfolio_app/widgets/home/end_drawer.dart';
+import 'package:portfolio_app/section/experiences_section.dart';
+import 'package:portfolio_app/section/presentation/presentation_section_desktop.dart';
+import 'package:portfolio_app/section/presentation/presentation_section_mobile.dart';
+import 'package:portfolio_app/section/projects_section.dart';
+import 'package:portfolio_app/widgets/common/responsive.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
@@ -31,11 +31,11 @@ class _MyHomePageState extends State<MyHomePage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Responsive(
-                desktop: PresentationDesktop(),
-                mobile: PresentationMobile(),
+                desktop: PresentationSectionDesktop(),
+                mobile: PresentationSectionMobile(),
               ),
               Responsive(
-                desktop: AboutDesktop(),
+                desktop: AboutSection(),
               ),
               const ExperiencesSection(),
               const ProjectsSection()

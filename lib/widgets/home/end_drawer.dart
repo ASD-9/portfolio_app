@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio_app/widgets/responsive.dart';
-import 'package:portfolio_app/widgets/title_button.dart';
+import 'package:portfolio_app/widgets/common/responsive.dart';
+import 'package:portfolio_app/widgets/common/title_button.dart';
 
 class EndDrawer extends StatelessWidget {
   const EndDrawer({super.key});

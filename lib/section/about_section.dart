@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:portfolio_app/data/app_data.dart';
 import 'package:portfolio_app/models/personal_data_model.dart';
 
-class AboutDesktop extends StatelessWidget {
-  const AboutDesktop({super.key});
+class AboutSection extends StatelessWidget {
+  const AboutSection({super.key});
 
   @override
   Widget build(BuildContext context) {
