@@ -37,6 +37,7 @@ class ProjectsSection extends StatelessWidget {
   Widget _buildProjectCard(ProjectModel project, BuildContext context) {
     return InkWell(
       onTap: () async {
+        if (project.github.isEmpty) return;
         try {
           await launchUrl(Uri.parse(project.github));
         } catch (e) {
@@ -109,9 +110,10 @@ class ProjectsSection extends StatelessWidget {
                 style: Theme.of(context).textTheme.titleLarge
               ),
             ),
-            Icon(
-              Icons.open_in_new
-            )
+            if (project.github.isNotEmpty)
+              Icon(
+                Icons.open_in_new
+              )
           ],
         ),
         Text(project.description),
