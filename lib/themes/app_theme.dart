@@ -21,6 +21,9 @@ ThemeData getAppTheme() {
       backgroundColor: colorScheme.onPrimary,
       shape: const StadiumBorder(),
       labelStyle: TextStyle(color: colorScheme.onSurface,),
+      iconTheme: IconThemeData(
+        color: colorScheme.onSurface
+      ),
       side: BorderSide.none,
       padding: EdgeInsets.all(10),
     ),

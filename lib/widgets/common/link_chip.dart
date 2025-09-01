@@ -25,7 +25,7 @@ class LinkChip extends StatelessWidget {
       },
       backgroundColor: Colors.transparent,
       label: Text(link.label),
-      avatar: Icon(Icons.link, color: Theme.of(context).colorScheme.onSurface,),
+      avatar: Icon(Icons.link),
     );
   }
 }

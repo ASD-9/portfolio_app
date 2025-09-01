@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio_app/data/app_data.dart';
 import 'package:portfolio_app/models/personal_data_model.dart';
 import 'package:portfolio_app/widgets/presentation/contact_icon_button.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Profil extends StatelessWidget {
   Profil({super.key});
@@ -29,11 +30,29 @@ class Profil extends StatelessWidget {
               ContactIconButton(uri: Uri.parse(personalData.resume), toolTip: "CV", icon: "resume"),
             ],
           ),
+          ActionChip(
+            onPressed: () async {
+              try {
+                await launchUrl(Uri.parse("https://portfolio-terminal.asd9.fun"));
+              } catch (e) {
+                if (context.mounted) {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(
+                      content: Text("Impossible d'ouvrir le lien"),
+                    ),
+                  );
+                } 
+              }
+            },
+            backgroundColor: Colors.transparent,
+            label: const Text("Accéder à la version terminal"),
+            avatar: const Icon(Icons.terminal),
+          ),
           Wrap(
             spacing: 20,
             runSpacing: 10,
             children: personalData.softSkills.map((e) => Chip(label: Text(e))).toList(),
-          )
+          ),
         ],
       ),
     );
