@@ -68,7 +68,7 @@ class ProjectsSection extends StatelessWidget {
         ClipRRect(
           borderRadius: BorderRadius.circular(20),
           child: Image.asset(
-            "assets/images/project-${project.id}.jpg",
+            "assets/images/project-${project.id}.png",
           ),
         ),
         _buildProjectDescription(project, context)
@@ -84,7 +84,7 @@ class ProjectsSection extends StatelessWidget {
         ClipRRect(
           borderRadius: BorderRadius.circular(20),
           child: Image.asset(
-            "assets/images/project-${project.id}.jpg",
+            "assets/images/project-${project.id}.png",
             width: MediaQuery.of(context).size.width * 0.3,
           ),
         ),
